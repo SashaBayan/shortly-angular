@@ -8,14 +8,24 @@ angular.module('shortly.services', [])
       url: '/api/links'
     })
     .then(function(res){
-      // console.log('res.data in Links:')
-      // console.log(res.data);
       return res.data;
     });
   };
 
+  var add = function(link) {
+    return $http({
+      method: 'POST',
+      url: '/api/links'
+    })
+    .then(function(res) {
+      console.log('shorten!');
+      return res.data;
+    })
+  }
+
   return {
-    get: get
+    get: get,
+    add: add
   };
 
 
