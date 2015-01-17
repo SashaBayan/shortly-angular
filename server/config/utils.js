@@ -20,6 +20,7 @@ module.exports = {
   },
 
   isValidUrl: function(url) {
+    console.log('HERE BE OUR URL SONNNNNNN', url);
     return url.match(rValidUrl);
   }
 };

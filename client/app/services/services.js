@@ -15,11 +15,13 @@ angular.module('shortly.services', [])
   var add = function(link) {
     return $http({
       method: 'POST',
-      url: '/api/links'
+      url: '/api/links',
+      data: {url:'http://www.cnn.com'}    //link
     })
     .then(function(res) {
       console.log('shorten!');
-      return res.data;
+      console.log(res);
+      return res;
     })
   }
 
